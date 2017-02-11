@@ -1,4 +1,4 @@
-# MC [![Build Status](https://travis-ci.org/Flight/kfc.svg?branch=master)](https://travis-ci.org/Flight/mc)
+# MC [![Build Status](https://travis-ci.org/Flight/mc.svg?branch=master)](https://travis-ci.org/Flight/mc)
 
 ## Quick start for developers
 Project uses node + Gulp for fast developing.
