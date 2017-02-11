@@ -1,0 +1,39 @@
+@import "libs/all";
+@import "mixins/all";
+@import "components/all";
+
+.clearfix {
+    @include clearfix;
+}
+.text-center {
+    text-align: center !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #ab1d2c;
+    text-align: center;
+}
+html {
+    color: #665951;
+    font-size: 14px;
+    min-width: 320px;
+    background: #fff;
+}
+body {
+    position: relative;
+}
+
+a {
+    color: #ab1d2c;
+    text-decoration: none;
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+    }
+}
+
