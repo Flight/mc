@@ -26,3 +26,8 @@ To compile scss:
 ```sh
 $ gulp scss
 ```
+
+To run webserver with livereload:
+```sh
+$ gulp webserver
+```

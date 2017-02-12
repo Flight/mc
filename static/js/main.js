@@ -1,3 +1,5 @@
 (function ($) {
-    $('body');
+    $('.js-slick').slicknav({
+        label: ''
+    });
 } (jQuery));

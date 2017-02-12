@@ -1,0 +1,119 @@
+.header {
+    @include clearfix;
+    background: #fff;
+    border-bottom: solid 1px #e0e1e5;
+    padding: 18px 34px 19px;
+}
+
+.header-logo {
+    float: left;
+    margin-right: 56px;
+    position: relative;
+    z-index: 1;
+
+    &__link {
+        display: block;
+        width: 64px;
+        height: 49px;
+        background: url('../img/header-logo.png') no-repeat;
+        background-size: cover;
+        text-indent: -999px;
+    }
+}
+
+.header-nav {
+    float: left;
+    margin: 14px 0 0;
+
+    &__item {
+        display: inline;
+        &:last-child &__link {
+            margin-right: 0;
+        }
+    }
+
+    &__link {
+        display: inline-block;
+        margin: 0 40px 0 0;
+        font-size: 13px;
+        font-weight: 600;
+        color: #1a1b1c;
+    }
+}
+
+.header-user-actions {
+    float: right;
+    margin: 9px 0 0;
+    font-size: 13px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 600;
+
+    &__link {
+        display: inline-block;
+        color: #1a1b1c;
+
+        &--sign-up {
+            border: solid 1px #dadada;
+            border-radius: 3px;
+            padding: 5px 19px 6px;
+        }
+        &--login {
+            padding: 6px 0;
+            margin-left: 27px;
+        }
+    }
+}
+
+@media (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
+    .header {
+        padding: 24px 28px 29px 22px;
+    }
+    .header-logo {
+        margin-right: 24px;
+
+        &__link {
+            width: 43px;
+            height: 33px;
+        }
+    }
+    .header-nav{
+        margin-top: 8px;
+        &__link {
+            margin-right: 26px;
+        }
+    }
+    .header-user-actions {
+        margin-top: 3px;
+
+        &__link--login {
+            margin-left: 12px;
+        }
+    }
+}
+
+@media (max-width: $screen-xs-max) {
+    .header {
+        padding: 24px 24px 29px 22px;
+        min-height: 33px;
+    }
+    .header-logo {
+        margin: 0;
+
+        &__link {
+            width: 43px;
+            height: 33px;
+        }
+    }
+    .header-user-actions {
+        position: absolute;
+        top: 27px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        margin: 0;
+    }
+    .header-nav-mobile {
+        clear: both;
+        padding-top: 10px;
+    }
+}

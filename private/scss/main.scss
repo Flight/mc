@@ -1,12 +1,21 @@
-@import "libs/all";
-@import "mixins/all";
-@import "components/all";
+@import 'components/all';
+@import 'mixins/all';
+@import 'libs/all';
+@import 'header';
+@import 'footer';
 
 .clearfix {
     @include clearfix;
 }
 .text-center {
     text-align: center !important;
+}
+.hidden {
+    display: none !important;
+}
+
+strong {
+    font-weight: bold;
 }
 
 h1,
@@ -15,21 +24,46 @@ h3,
 h4,
 h5,
 h6 {
-    color: #ab1d2c;
-    text-align: center;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    color: #2d2d2d;
+    text-align: left;
+    line-height: 1;
 }
-html {
-    color: #665951;
+
+h1 {
+    font-size: 44px;
+}
+h2 {
+    font-size: 26px;
+}
+h3 {
+    font-size: 21px;
+}
+h4 {
+    font-size: 18px;
+}
+h5 {
+    font-size: 16px;
+}
+h6 {
     font-size: 14px;
-    min-width: 320px;
+}
+
+html {
     background: #fff;
 }
 body {
+    color: #2f3030;
+    font-size: 14px;
+    min-width: 320px;
     position: relative;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
 }
 
 a {
-    color: #ab1d2c;
+    color: #bf0000;
     text-decoration: none;
     &:hover,
     &:focus {
@@ -37,3 +71,144 @@ a {
     }
 }
 
+.wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    background-color: #edeef2;
+    overflow: hidden;
+}
+
+.container-fluid {
+    @include clearfix;
+    max-width: 1130px;
+}
+
+.main-wecome {
+    position: relative;
+    padding: 100px 0 90px;
+    &:before {
+        content: '';
+        position: absolute;
+        top: 22px;
+        right: -80px;
+        background: url('../img/main-welcome-pic.jpg');
+        width: 930px;
+        height: 622px;
+    }
+    &__content {
+        position: relative;
+        z-index: 1;
+    }
+    &__text {
+        padding-right: 650px;
+        margin: 35px 0 37px;
+        font-size: 16px;
+    }
+    h1 {
+        font-size: 60px;
+    }
+    &__sign {
+        display: inline-block;
+        border-radius: 4px;
+        background: #bf0000;
+        color: #fff;
+        background: linear-gradient(to right, #bf0000 0%,#e85660 100%);
+        font-size: 17px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-weight: bold;
+        padding: 12px 37px;
+    }
+    &__top {
+        min-height: 497px;
+    }
+}
+
+.main-welcome-pros {
+    p {
+        margin: 14px 0 10px;
+        padding: 0 30px 0 0;
+    }
+    a {
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 15px;
+        font-weight: bold;
+    }
+}
+
+@media (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
+    .main-wecome {
+        padding: 47px 68px 75px;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 100px;
+            right: -16px;
+            background-image: url('../img/main-welcome-pic-tablet.jpg');
+            width: 653px;
+            height: 526px;
+        }
+        &__text {
+            padding-right: 300px;
+        }
+        h1 {
+            font-size: 46px;
+        }
+        &__top {
+            min-height: 560px;
+        }
+    }
+
+    .main-welcome-pros {
+        &__column {
+            margin-top: 35px;
+        }
+    }
+}
+
+@media (max-width: $screen-xs-max) {
+    .main-wecome {
+        text-align: center;
+        padding: 40px 15px 50px;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 283px;
+            right: -16px;
+            background-image: url('../img/main-welcome-pic-mobile.jpg');
+            width: 320px;
+            height: 269px;
+        }
+        &__text {
+            padding-right: 0;
+            font-size: 14px;
+            margin: 23px 0 20px;
+        }
+        h1 {
+            font-size: 30px;
+            text-align: center;
+        }
+        &__sign {
+            font-size: 15px;
+            padding: 10px 35px;
+        }
+        &__top {
+            min-height: 490px;
+        }
+    }
+
+    .main-welcome-pros {
+        &__column {
+            margin-top: 30px;
+            text-align: center;
+        }
+        h2 {
+            text-align: center;
+            font-size: 21px;
+        }
+        p {
+            padding: 0;
+        }
+    }
+}
