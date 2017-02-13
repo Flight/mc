@@ -1,0 +1,51 @@
+.btn {
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    color: #2b2b2c;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-weight: 600;
+    padding: 4px 26px;
+    box-shadow: 0 0 0 1px #d3d1d1;
+    -webkit-appearance: none;
+    background: none;
+    border: 0;
+    line-height: 1.6;
+
+    &::-moz-focus-inner {
+        border: 0;
+        padding: 0;
+    }
+
+    &:hover, &:focus {
+        box-shadow: none;
+        text-decoration: none;
+    }
+
+    &--red {
+        box-shadow: none;
+        font-weight: 700;
+        color: #fff;
+        background: #bf0000;
+        background: linear-gradient(to right, #bf0000 0%,#e85660 100%);
+
+        &:hover, &:focus {
+            background: #bf0000;
+        }
+    }
+    &--big {
+        font-size: 17px;
+        padding: 12px 37px;
+    }
+}
+
+@media (max-width: $screen-xs-max) {
+    .btn {
+        &--big {
+            font-size: 15px;
+            padding: 10px 35px;
+        }
+    }
+}
