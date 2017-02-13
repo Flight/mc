@@ -1,8 +1,9 @@
-@import 'components/all';
 @import 'mixins/all';
+@import 'components/all';
 @import 'libs/all';
 @import 'header';
 @import 'footer';
+@import 'login';
 
 .clearfix {
     @include clearfix;
@@ -12,6 +13,14 @@
 }
 .hidden {
     display: none !important;
+}
+
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
 }
 
 strong {
@@ -107,17 +116,6 @@ a {
     h1 {
         font-size: 60px;
     }
-    &__sign {
-        display: inline-block;
-        border-radius: 4px;
-        background: #bf0000;
-        color: #fff;
-        background: linear-gradient(to right, #bf0000 0%,#e85660 100%);
-        font-size: 17px;
-        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-        font-weight: bold;
-        padding: 12px 37px;
-    }
     &__top {
         min-height: 497px;
     }
@@ -188,10 +186,6 @@ a {
         h1 {
             font-size: 30px;
             text-align: center;
-        }
-        &__sign {
-            font-size: 15px;
-            padding: 10px 35px;
         }
         &__top {
             min-height: 490px;

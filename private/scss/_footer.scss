@@ -9,6 +9,11 @@
 
     a {
         color: #f1f1f1;
+
+        &:hover, &:focus {
+            color: #b4b6be;
+            text-decoration: none;
+        }
     }
 
     .row--second {
@@ -38,14 +43,33 @@
         background: url('../img/icons-social.png');
         margin-right: 28px;
 
+        &--facebook {
+            background-position: 0 0;
+
+            &:hover {
+                background-position: 0 -17px;
+            }
+        }
         &--twitter {
             background-position: -17px 0;
+
+            &:hover {
+                background-position: -17px -17px;
+            }
         }
         &--instagram {
             background-position: -34px 0;
+
+            &:hover {
+                background-position: -34px -17px;
+            }
         }
         &--youtube {
             background-position: -51px 0;
+
+            &:hover {
+                background-position: -51px -17px;
+            }
         }
         &:last-child {
             margin-right: 0;

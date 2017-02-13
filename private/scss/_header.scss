@@ -3,6 +3,15 @@
     background: #fff;
     border-bottom: solid 1px #e0e1e5;
     padding: 18px 34px 19px;
+
+    a {
+        color: #1a1b1c;
+
+        &:hover, &:focus {
+            color: #777a80;
+            text-decoration: none;
+        }
+    }
 }
 
 .header-logo {
@@ -37,7 +46,6 @@
         margin: 0 40px 0 0;
         font-size: 13px;
         font-weight: 600;
-        color: #1a1b1c;
     }
 }
 
@@ -50,12 +58,13 @@
 
     &__link {
         display: inline-block;
-        color: #1a1b1c;
 
         &--sign-up {
-            border: solid 1px #dadada;
-            border-radius: 3px;
-            padding: 5px 19px 6px;
+            padding: 6px 20px 7px;
+
+            &:hover, &:focus {
+                color: #1a1b1c !important;
+            }
         }
         &--login {
             padding: 6px 0;
@@ -72,11 +81,12 @@
         margin-right: 24px;
 
         &__link {
+            background-image: url('../img/header-logo-mobile.png');
             width: 43px;
             height: 33px;
         }
     }
-    .header-nav{
+    .header-nav {
         margin-top: 8px;
         &__link {
             margin-right: 26px;
@@ -100,6 +110,7 @@
         margin: 0;
 
         &__link {
+            background-image: url('../img/header-logo-mobile.png');
             width: 43px;
             height: 33px;
         }

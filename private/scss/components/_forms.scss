@@ -1,0 +1,56 @@
+.form {
+    label {
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    input[type="text"] {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 11px 13px;
+        border: solid 1px #dbdbdb;
+        border-radius: 4px;
+        font-size: 14px;
+        font-family: 'Open Sans', sans-serif;
+    }
+}
+
+.form-row {
+    &__title {
+        @include clearfix;
+        padding: 20px 0 4px;
+    }
+    &--checkbox {
+        margin-top: 20px;
+        label {
+            font-size: 14px;
+            font-weight: 700;
+        }
+    }
+    &--submit {
+        margin-top: 40px;
+        button {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: $screen-xs-max) {
+    .form {
+        label {
+            font-size: 14px;
+        }
+    }
+    .form-row {
+        &__title {
+            font-size: 12px;
+        }
+        &--checkbox {
+            label {
+                font-size: 12px;
+                vertical-align: top;
+            }
+        }
+    }
+}
