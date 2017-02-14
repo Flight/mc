@@ -59,8 +59,13 @@ h6 {
     font-size: 14px;
 }
 
+html, body {
+    position: relative;
+    min-height: 100%;
+}
+
 html {
-    background: #fff;
+    background: #edeef2;
 }
 body {
     color: #2f3030;
@@ -83,7 +88,6 @@ a {
 .wrapper {
     max-width: 1400px;
     margin: 0 auto;
-    background-color: #edeef2;
     overflow: hidden;
 }
 

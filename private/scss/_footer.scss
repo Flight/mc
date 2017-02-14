@@ -1,11 +1,6 @@
 .footer {
-    @include clearfix;
-    color: #a4a4a6;
-    background: #2b2d31;
-    padding: 52px 0 55px;
-    font-size: 13px;
-    line-height: 1.8;
-    font-weight: 400;
+    left: 0;
+    right: 0;
 
     a {
         color: #f1f1f1;
@@ -20,13 +15,26 @@
         font-size: 12px;
         margin-top: 22px;
     }
+
+    &__content {
+        @include clearfix;
+        color: #a4a4a6;
+        background: #2b2d31;
+        padding: 52px 0 55px;
+        font-size: 13px;
+        line-height: 1.8;
+        font-weight: 400;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
 }
+
 .footer-logo {
     display: inline-block;
     background: url('../img/footer-logo.png') no-repeat;
     width: 130px;
     height: 32px;
-    text-indent: -999px;
+    text-indent: -9999px;
     margin-bottom: 20px;
 }
 .footer-additional a {
