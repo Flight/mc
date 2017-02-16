@@ -1,6 +1,12 @@
 .footer {
     left: 0;
     right: 0;
+    color: #a4a4a6;
+    background: #2b2d31;
+    padding: 52px 0 55px;
+    font-size: 13px;
+    line-height: 1.8;
+    font-weight: 400;
 
     a {
         color: #f1f1f1;
@@ -18,12 +24,6 @@
 
     &__content {
         @include clearfix;
-        color: #a4a4a6;
-        background: #2b2d31;
-        padding: 52px 0 55px;
-        font-size: 13px;
-        line-height: 1.8;
-        font-weight: 400;
         max-width: 1400px;
         margin: 0 auto;
     }

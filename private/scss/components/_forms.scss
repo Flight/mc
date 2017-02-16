@@ -23,6 +23,9 @@
     }
     &--checkbox {
         margin-top: 20px;
+        input {
+            vertical-align: top;
+        }
         label {
             font-size: 14px;
             font-weight: 700;

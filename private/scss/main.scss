@@ -85,7 +85,7 @@ a {
     }
 }
 
-.wrapper {
+.main-container {
     max-width: 1400px;
     margin: 0 auto;
     overflow: hidden;
@@ -177,10 +177,11 @@ a {
             content: '';
             position: absolute;
             top: 283px;
-            right: -16px;
+            left: 50%;
             background-image: url('../img/main-welcome-pic-mobile.jpg');
-            width: 320px;
+            width: 403px;
             height: 269px;
+            margin-left: -203px;
         }
         &__text {
             padding-right: 0;
