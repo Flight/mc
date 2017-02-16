@@ -1,4 +1,9 @@
+.wrapper--login {
+    height: 100%;
+}
+
 .main-login {
+    height: 100%;
     margin: 0;
     &__left {
         min-height: 900px;
@@ -8,7 +13,7 @@
         font-size: 17px;
         min-height: 900px;
         color: #fff;
-        background: url('../img/login-bg.jpg') no-repeat 50% 100%;
+        background: #465668 url('../img/login-bg.jpg') no-repeat 50% 100%;
         text-align: center;
 
         h1 {
@@ -34,8 +39,6 @@
     &__content {
         max-width: 476px;
         margin: 0 auto;
-        position: relative;
-        left: 12px;
     }
     &__new {
         margin-top: 45px;
@@ -74,7 +77,8 @@
         }
 
         &__content {
-            margin: 0 35px;
+            max-width: 300px;
+            margin: 0 auto;
         }
 
         &__logo {
@@ -117,7 +121,8 @@
         }
 
         &__content {
-            margin: 0 21px;
+            max-width: 280px;
+            margin: 0 auto;
             left: 0;
             position: static;
         }
