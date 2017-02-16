@@ -39,7 +39,7 @@ strong {
     li {
         background: url(../img/list-dot.png) no-repeat 0 50%;
         padding-left: 24px;
-        margin: 12px 0;
+        margin: 12px 0 0;
     }
 }
 
@@ -229,5 +229,25 @@ a {
         p {
             padding: 0;
         }
+    }
+
+
+    h1, .h1 {
+        font-size: 29px;
+    }
+    h2, .h2 {
+        font-size: 21px;
+    }
+    h3, .h3 {
+        font-size: 18px;
+    }
+    h4, .h4 {
+        font-size: 16px;
+    }
+    h5, .h5 {
+        font-size: 14px;
+    }
+    h6, .h6 {
+        font-size: 12px;
     }
 }

@@ -1,4 +1,5 @@
 .main-features-video {
+    overflow: hidden;
     text-align: center;
     background: url('../img/features-video-bg.png') no-repeat 50% -50px;
     &__content {
@@ -12,9 +13,13 @@
         img {
             display: block;
         }
+        &--mobile {
+            display: none;
+            width: 275px;
+        }
     }
 
-    .main-features-video__header {
+    &__header {
         text-align: center;
         margin: 46px 0 26px;
         font-size: 42px;
@@ -75,5 +80,33 @@
         text-align: center;
         font-size: 34px;
         margin-bottom: 50px;
+    }
+}
+
+@media (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
+    .main-features-list .list {
+        margin: 0 22%;
+    }
+}
+
+@media (max-width: $screen-xs-max) {
+    .main-features-video {
+        &__video {
+            display: none;
+            &--mobile {
+                display: block;
+            }
+        }
+        &__header {
+            font-size: 29px;
+        }
+    }
+
+    .main-features-list__header {
+        font-size: 29px;
+    }
+
+    .h2.main-features-try__header {
+        font-size: 25px;
     }
 }
