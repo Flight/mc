@@ -117,6 +117,7 @@ a {
 .main-wecome {
     position: relative;
     padding: 100px 0 90px;
+    overflow: hidden;
     &:before {
         content: '';
         position: absolute;
@@ -249,5 +250,15 @@ a {
     }
     h6, .h6 {
         font-size: 12px;
+    }
+}
+
+@media (max-width: $screen-xs-max) {
+    body {
+        font-size: 13px;
+    }
+
+    .main-wecome, .main-welcome-pros {
+        font-size: 14px;
     }
 }

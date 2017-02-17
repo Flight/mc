@@ -91,6 +91,9 @@
 
 @media (max-width: $screen-xs-max) {
     .main-features-video {
+        &__content {
+            padding: 45px 0;
+        }
         &__video {
             display: none;
             &--mobile {
@@ -101,9 +104,33 @@
             font-size: 29px;
         }
     }
+    .main-features-video p {
+        font-size: 14px;
+    }
+    .main-features-section {
+        font-size: 13px;
+        padding: 50px 0 0;
+        h2 {
+            margin-top: 10px;
+        }
+    }
+    .main-features-list {
+        padding: 35px 0;
+        .list {
+            font-size: 13px;
+            li {
+                background-position: 0 9px;
+                margin: 6px 0 0;
+            }
+        }
+        &__header {
+            font-size: 29px;
+        }
+    }
 
-    .main-features-list__header {
-        font-size: 29px;
+    .main-features-try {
+        font-size: 13px;
+        padding: 30px 0 60px;
     }
 
     .h2.main-features-try__header {
