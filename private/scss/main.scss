@@ -5,6 +5,7 @@
 @import 'footer';
 @import 'login';
 @import 'features';
+@import 'pricing';
 
 .clearfix {
     @include clearfix;
@@ -20,6 +21,9 @@
 }
 .hidden {
     display: none !important;
+}
+br.visible--lg {
+    display: none;
 }
 .pull-left {
     float: left;
@@ -37,45 +41,62 @@ strong {
 
 .list {
     li {
-        background: url(../img/list-dot.png) no-repeat 0 50%;
-        padding-left: 24px;
         margin: 12px 0 0;
+        padding-left: 24px;
+        background: url(../img/list-dot.png) no-repeat 0 50%;
     }
 }
 
-h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5,
-h6, .h6 {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: bold;
-    color: #2d2d2d;
-    text-align: left;
-    line-height: 1;
+.color-danger {
+    color: #bf0000;
 }
 
-h1, .h1 {
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+    color: #2d2d2d;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    line-height: 1;
+    text-align: left;
+}
+
+h1,
+.h1 {
     font-size: 44px;
 }
-h2, .h2 {
+h2,
+.h2 {
     font-size: 26px;
 }
-h3, .h3 {
+h3,
+.h3 {
     font-size: 21px;
 }
-h4, .h4 {
+h4,
+.h4 {
     font-size: 18px;
 }
-h5, .h5 {
+h5,
+.h5 {
     font-size: 16px;
 }
-h6, .h6 {
+h6,
+.h6 {
     font-size: 14px;
 }
 
-html, body {
+html,
+body {
     position: relative;
     height: 100%;
 }
@@ -84,12 +105,12 @@ html {
     background: #edeef2;
 }
 body {
-    color: #2f3030;
-    font-size: 14px;
-    min-width: 320px;
     position: relative;
+    color: #2f3030;
     font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
     line-height: 1.6;
+    min-width: 320px;
 }
 
 a {
@@ -105,37 +126,38 @@ a {
     width: 100%;
 }
 
-.main-container {
-}
-
 .container-fluid {
     @include clearfix;
     max-width: 1130px;
     margin: 0 auto;
+
+    &--wide {
+        max-width: 1342px;
+    }
 }
 
 .main-wecome {
     position: relative;
-    padding: 100px 0 90px;
     overflow: hidden;
+    padding: 100px 0 90px;
     &:before {
         content: '';
         position: absolute;
         top: 22px;
         left: 50%;
-        margin-left: -300px;
-        background: url('../img/main-welcome-pic.jpg');
         width: 930px;
         height: 622px;
+        margin-left: -300px;
+        background: url('../img/main-welcome-pic.jpg');
     }
     &__content {
         position: relative;
         z-index: 1;
     }
     &__text {
-        padding-right: 650px;
-        margin: 35px 0 37px;
         font-size: 16px;
+        margin: 35px 0 37px;
+        padding-right: 650px;
     }
     h1 {
         font-size: 60px;
@@ -157,19 +179,24 @@ a {
     }
 }
 
+@media (min-width: $screen-lg-min) {
+    br.visible--lg {
+        display: block;
+    }
+}
+
 @media (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
     .main-wecome {
         padding: 47px 68px 75px;
-
         &:before {
             content: '';
             position: absolute;
             top: 100px;
-            left: auto;
             right: -16px;
-            background-image: url('../img/main-welcome-pic-tablet.jpg');
+            left: auto;
             width: 653px;
             height: 526px;
+            background-image: url('../img/main-welcome-pic-tablet.jpg');
         }
         &__text {
             padding-right: 300px;
@@ -193,21 +220,20 @@ a {
     .main-wecome {
         text-align: center;
         padding: 40px 15px 50px;
-
         &:before {
             content: '';
             position: absolute;
             top: 283px;
             left: 50%;
-            background-image: url('../img/main-welcome-pic-mobile.jpg');
             width: 403px;
             height: 269px;
             margin-left: -203px;
+            background-image: url('../img/main-welcome-pic-mobile.jpg');
         }
         &__text {
-            padding-right: 0;
             font-size: 14px;
             margin: 23px 0 20px;
+            padding-right: 0;
         }
         h1 {
             font-size: 30px;
@@ -220,12 +246,12 @@ a {
 
     .main-welcome-pros {
         &__column {
-            margin-top: 30px;
             text-align: center;
+            margin-top: 30px;
         }
         h2 {
-            text-align: center;
             font-size: 21px;
+            text-align: center;
         }
         p {
             padding: 0;
@@ -233,22 +259,28 @@ a {
     }
 
 
-    h1, .h1 {
+    h1,
+    .h1 {
         font-size: 29px;
     }
-    h2, .h2 {
+    h2,
+    .h2 {
         font-size: 21px;
     }
-    h3, .h3 {
+    h3,
+    .h3 {
         font-size: 18px;
     }
-    h4, .h4 {
+    h4,
+    .h4 {
         font-size: 16px;
     }
-    h5, .h5 {
+    h5,
+    .h5 {
         font-size: 14px;
     }
-    h6, .h6 {
+    h6,
+    .h6 {
         font-size: 12px;
     }
 }
@@ -258,7 +290,8 @@ a {
         font-size: 13px;
     }
 
-    .main-wecome, .main-welcome-pros {
+    .main-wecome,
+    .main-welcome-pros {
         font-size: 14px;
     }
 }
