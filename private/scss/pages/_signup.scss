@@ -1,57 +1,250 @@
-.main-try {
-    padding: 118px 0 103px;
-    background: url(../img/try-bg.png) no-repeat 50% 50%;
-    &__content {
-        margin: 0 auto;
-        max-width: 540px;
-    }
-    &__title {
-        text-align: center;
-    }
-    &__subtitle {
-        text-align: center;
-        margin: 20px 0 0;
-        font-size: 16px;
+.main-signup {
+    padding: 74px 0 87px;
+    &__row {
+        margin: 0;
+        border-radius: 4px;
+        overflow: hidden;
+        border: solid #dfe0e4;
+        border-width: 0 1px 1px 0;
     }
 }
-.main-try-form {
-    margin: 40px auto 0;
-    padding: 23px 26px 43px;
-    border: solid #dfe0e4;
-    border-width: 0 1px 1px 0;
-    border-radius: 4px;
+.main-signup-form {
     background: #fff;
+    padding: 26px 27px 58px;
+
+    &__title {
+        margin: 45px 0 19px;
+    }
+    &__subtitle.h3 {
+        font-size: 21px;
+        font-weight: 500;
+    }
+    &__currency {
+        font-size: 13px;
+        color: #5a5a5a;
+        margin-bottom: 10px;
+    }
 }
-
-
-@media (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
-    .main-try {
-        padding: 57px 0 74px;
-        background-image: url(../img/try-bg-tablet.png);
-        &__title {
-            font-size: 30px;
+.main-signup-info {
+    background: #f3f4f6;
+    padding: 0 30px 45px;
+    &__title {
+        position: relative;
+        padding: 45px 0 10px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        &--border:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -30px;
+            right: -30px;
+            background: #d9d9d9;
+            height: 1px;
+            overflow: hidden;
         }
     }
-    .main-try-form {
-        margin: 35px auto 0;
-        max-width: 480px;
+}
+
+.comment-block {
+    margin: 25px 0 29px;
+    &__text {
+        position: relative;
+        background: #fff;
+        padding: 20px 30px;
+        color: #78797e;
+        font-size: 13px;
+        border-radius: 4px;
+        border: solid #e5e6e8;
+        border-width: 0 1px 1px 0;
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: -10px;
+            left: 17px;
+            background: url(../img/comment-corner.png);
+            width: 11px;
+            height: 10px;
+            overflow: hidden;
+        }
+    }
+    &__author {
+        margin: 15px 0 0;
+    }
+    &__pic {
+        width: 39px;
+        height: 39px;
+        overflow: hidden;
+        float: left;
+    }
+    &__info {
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        margin-left: 55px;
+        color: #5a5a5a;
+        font-size: 13px;
+        font-weight: 500;
+        strong {
+            color: #121212;
+        }
+    }
+}
+
+.form--signup {
+    label {
+        font-size: 14px;
+        font-weight: 600;
+    }
+}
+
+.main-payment {
+    margin: 53px 0 10px;
+    border: solid 3px #dbdce2;
+    border-radius: 4px;
+    padding: 26px 24px 18px;
+    font-size: 13px;
+    &__title {
+        font-size: 18px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-weight: bold;
+    }
+    &__subtitle {
+        font-size: 14px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-weight: 600;
+        margin: 12px 0 5px;
+    }
+    &__info {
+        margin-bottom: -10px;
+    }
+    .select2 {
+        margin-right: 10px;
+    }
+
+    .form-row--card-number {
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: 10px;
+            right: 23px;
+            background: url(../img/payment-cards.png);
+            width: 85px;
+            height: 25px;
+        }
+    }
+
+    &__or {
+        margin: 15px 0 10px;
+        font-size: 16px;
+        font-weight: 600;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+    .button-paypal {
+        display: inline-block;
+        height: 31px;
+        line-height: 31px;
+        padding: 0 13px;
+        background: #ffe776;
+        color: #2b2b2c;
+        font-size: 13px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-weight: 600;
+        border-radius: 4px;
+
+        img {
+            vertical-align: top;
+            position: relative;
+            top: 9px;
+            margin-left: 8px;
+        }
+    }
+
+    &__secure {
+        display: block;
+        margin-top: 4px;
+        text-align: right;
+        background: url(../img/secure.png) no-repeat 100% 0;
+        height: 18px;
+        line-height: 18px;
+        overflow: hidden;
+        padding-right: 20px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-weight: 500;
+        font-size: 12px;
+    }
+}
+
+@media (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
+    .main-payment {
+        margin-top: 40px;
+    }
+    .main-signup {
+        padding: 62px 0 73px;
+    }
+    .main-signup-form {
+        padding-top: 12px;
+    }
+    .main-signup-info {
+        overflow: hidden;
+        padding: 0 20px;
+        &__title {
+            padding-top: 35px;
+        }
+    }
+    .comment-block {
+        &__text {
+            padding: 15px 20px;
+        }
     }
 }
 
 @media (max-width: $screen-xs-max) {
-    .main-try {
-        padding: 40px 0 54px;
-        margin: 0 10px;
-        background: none;
+    .main-signup {
+        padding: 32px 0 55px;
+        font-size: 12px;
+    }
+    .main-signup-form {
+        padding-top: 12px;
+        padding-bottom: 35px;
         &__title {
-            font-size: 24px;
+            margin-top: 30px;
         }
-        &__subtitle {
-            font-size: 14px;
+        &__subtitle.h3 {
+            font-size: 18px;
+        }
+        .form-row--checkbox {
+            margin-top: 10px;
+        }
+        .form-row--submit {
+            margin-top: 20px;
+        }
+        .form--signup label {
+            font-size: 12px;
+        }
+        .input--small {
+            width: 80px !important;
+            margin: 0;
+        }
+        .form-row--card-number {
+            &:before {
+                top: 17px;
+                bottom: auto;
+                right: 21px;
+                background: url(../img/payment-cards-mobile.png);
+                width: 57px;
+                height: 17px;
+            }
         }
     }
-    .main-try-form {
-        padding: 15px 21px 34px;
-        margin: 40px 12px 0;
+    .main-signup-info {
+        display: none;
+    }
+    .main-payment {
+        margin-top: 40px;
+        &__secure {
+            margin-top: 25px;
+        }
     }
 }

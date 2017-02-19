@@ -3,6 +3,13 @@
         $('.js-slick').slicknav({
             label: ''
         });
+
+        $('select').select2({
+            minimumResultsForSearch: Infinity
+        });
+
+        $('.js-card-number').mask('9999-9999-9999-9999');
+        $('.js-cvv').mask('999');
     });
 
     $(window).on('load resize', positionFooter);
