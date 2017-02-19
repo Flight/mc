@@ -18,12 +18,13 @@
             position: 'static'
         });
 
-        if ($wrapper.outerHeight() < $window.outerHeight()) {
-            $footer.css({
-                position: 'absolute',
-                top: footerTop + 'px'
-            });
-        } else {
+        if ($wrapper.outerHeight() >= $window.outerHeight()) {
+            return;
         }
+
+        $footer.css({
+            position: 'absolute',
+            top: footerTop + 'px'
+        });
     }
 } (jQuery));
