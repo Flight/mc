@@ -70,8 +70,6 @@
     &__block {
         margin: 45px 0 55px;
     }
-    &__subtitle {
-    }
     &__list {
         font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
         font-size: 18px;
@@ -94,6 +92,33 @@
     }
 }
 
+.main-support-page {
+    padding: 0 0 80px;
+    &__content {
+        margin: 28px 0 0;
+        padding: 5px 0 0;
+        border-top: solid 1px #d9d9d9;
+    }
+    p {
+        margin: 10px 0;
+    }
+    h2 {
+        margin: 40px 0 20px;
+    }
+    h3 {
+        margin: 25px 0 15px;
+    }
+    &__recently {
+        margin: 40px 0 0;
+        &__list {
+            li {
+                font-size: 15px;
+                font-weight: 700;
+                margin: 10px 0;
+            }
+        }
+    }
+}
 
 @media (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
     .main-support-big {
@@ -125,6 +150,30 @@
     .main-support-inner {
         background-image: url(../img/support-inner-bg-tablet.png);
         padding: 55px 0 0;
+    }
+
+    .main-support-page {
+        padding-bottom: 50px;
+        &__title {
+            font-size: 30px;
+        }
+
+        h2 {
+            font-size: 23px;
+            margin: 30px 0 20px;
+        }
+
+        h3 {
+            font-size: 19px;
+        }
+        &__recently {
+            margin: 30px 0 0 -15px;
+            &__list {
+                li {
+                    line-height: 1.2;
+                }
+            }
+        }
     }
 }
 
@@ -188,6 +237,22 @@
             margin: 30px 0 40px;
         }
         &__list {
+            font-size: 15px;
+        }
+    }
+
+    .main-support-page {
+        padding-bottom: 50px;
+        &__title {
+            font-size: 24px;
+        }
+
+        h2 {
+            font-size: 19px;
+            margin: 30px 0 20px;
+        }
+
+        h3 {
             font-size: 15px;
         }
     }

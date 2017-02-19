@@ -22,6 +22,11 @@
 }
 .hidden {
     display: none !important;
+    @media (max-width: $screen-xs-max) {
+        &--xs {
+            display: none !important;
+        }
+    }
 }
 br.visible--lg {
     display: none;
@@ -123,6 +128,35 @@ a {
     }
 }
 
+.main-breadcrumbs {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    margin: 29px 0 50px;
+    a,
+    span {
+        background: url(../img/arrow-breadcrumbs.png) no-repeat 0 5px;
+        padding-left: 18px;
+        margin-left: 10px;
+        color: #78797e;
+        font-weight: 600;
+        &:first-child {
+            background: none;
+            padding-left: 0;
+            margin-left: 0;
+        }
+        &:last-child {
+            color: #2a2a2a;
+        }
+    }
+}
+
+p.pic {
+    margin: 25px 0 35px;
+    img {
+        max-width: 100%;
+    }
+}
+
 .wrapper {
     width: 100%;
 }
@@ -215,9 +249,22 @@ a {
             margin-top: 35px;
         }
     }
+
+    .main-breadcrumbs {
+        margin-bottom: 40px;
+    }
 }
 
 @media (max-width: $screen-xs-max) {
+    body {
+        font-size: 13px;
+    }
+
+    .main-wecome,
+    .main-welcome-pros {
+        font-size: 14px;
+    }
+
     .main-wecome {
         text-align: center;
         padding: 40px 15px 50px;
@@ -284,15 +331,8 @@ a {
     .h6 {
         font-size: 12px;
     }
-}
 
-@media (max-width: $screen-xs-max) {
-    body {
-        font-size: 13px;
-    }
-
-    .main-wecome,
-    .main-welcome-pros {
-        font-size: 14px;
+    .main-breadcrumbs {
+        margin-bottom: 20px;
     }
 }
