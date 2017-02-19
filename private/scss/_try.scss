@@ -1,0 +1,57 @@
+.main-try {
+    padding: 118px 0 103px;
+    background: url(../img/try-bg.png) no-repeat 50% 50%;
+    &__content {
+        margin: 0 auto;
+        max-width: 540px;
+    }
+    &__title {
+        text-align: center;
+    }
+    &__subtitle {
+        text-align: center;
+        margin: 20px 0 0;
+        font-size: 16px;
+    }
+}
+.main-try-form {
+    margin: 40px auto 0;
+    padding: 23px 26px 43px;
+    border: solid #dfe0e4;
+    border-width: 0 1px 1px 0;
+    border-radius: 4px;
+    background: #fff;
+}
+
+
+@media (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
+    .main-try {
+        padding: 57px 0 74px;
+        background-image: url(../img/try-bg-tablet.png);
+        &__title {
+            font-size: 30px;
+        }
+    }
+    .main-try-form {
+        margin: 35px auto 0;
+        max-width: 480px;
+    }
+}
+
+@media (max-width: $screen-xs-max) {
+    .main-try {
+        padding: 40px 0 54px;
+        margin: 0 10px;
+        background: none;
+        &__title {
+            font-size: 24px;
+        }
+        &__subtitle {
+            font-size: 14px;
+        }
+    }
+    .main-try-form {
+        padding: 15px 21px 34px;
+        margin: 40px 12px 0;
+    }
+}
