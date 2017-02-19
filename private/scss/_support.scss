@@ -1,0 +1,135 @@
+.main-support-big {
+    padding: 66px 0 47px;
+
+    &__title {
+        font-size: 52px;
+        font-weight: 300;
+        text-align: center;
+    }
+
+    &__pic {
+        margin-top: 10px;
+        display: block;
+        font-size: 28px;
+        color: #2d2d2d;
+        padding-top: 249px;
+        text-align: center;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        background: no-repeat 50% 0;
+
+        &:hover {
+            color: #bf0000;
+            text-decoration: none;
+        }
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 85px;
+            right: 0;
+            width: 1px;
+            height: 108px;
+            background: #d9d9d9;
+        }
+        &--start {
+            background-image: url(../img/support-icon-1.png);
+        }
+        &--tips {
+            background-image: url(../img/support-icon-2.png);
+        }
+        &--troubleshooting {
+            background-image: url(../img/support-icon-3.png);
+        }
+    }
+    &__column:last-child &__pic:before {
+        display: none;
+    }
+}
+
+.main-support-top-articles {
+    border-top: solid 1px #d9d9d9;
+    padding: 42px 0 65px;
+    &__list {
+        margin-top: 20px;
+        font-size: 18px;
+        li {
+            margin: 12px 0;
+        }
+    }
+}
+
+@media (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
+    .main-support-big {
+        padding: 58px 0 47px;
+
+        &__title {
+            font-size: 44px;
+        }
+
+        &__pic {
+            font-size: 21px;
+            padding-top: 207px;
+            &--start {
+                background-image: url(../img/support-icon-1-tablet.png);
+            }
+            &--tips {
+                background-image: url(../img/support-icon-2-tablet.png);
+            }
+            &--troubleshooting {
+                background-image: url(../img/support-icon-3-tablet.png);
+            }
+        }
+    }
+
+    .main-support-top-articles {
+        padding: 40px 0;
+    }
+}
+
+@media (max-width: $screen-xs-max) {
+    .main-support-big {
+        padding: 30px 0 20px;
+
+        &__title {
+            font-size: 30px;
+        }
+
+        &__pic {
+            font-size: 18px;
+            padding-top: 160px;
+            margin: -5px 0 15px;
+
+            &--start {
+                background-image: url(../img/support-icon-1-mobile.png);
+                padding-top: 150px;
+            }
+            &--tips {
+                background-image: url(../img/support-icon-2-mobile.png);
+            }
+            &--troubleshooting {
+                background-image: url(../img/support-icon-3-mobile.png);
+            }
+
+            &:before {
+                width: 86px;
+                height: 1px;
+                margin-left: -43px;
+                top: auto;
+                left: 50%;
+                right: auto;
+                bottom: -7px;
+            }
+        }
+    }
+
+    .main-support-top-articles {
+        padding: 40px 0;
+        &__list {
+            font-size: 15px;
+            margin: 0;
+            li {
+                margin: 12px 0 0;
+            }
+        }
+    }
+}
