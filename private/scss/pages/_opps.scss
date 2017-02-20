@@ -74,11 +74,11 @@
     .load-more {
         margin: 29px 192px 30px;
         &__link {
-            border: solid 1px #bbbec5;
+            box-shadow:inset 0px 0px 0px 1px #bbbec5;
             border-radius: 4px;
             color: #1d1d1d;
-            height: 42px;
-            line-height: 42px;
+            height: 44px;
+            line-height: 44px;
             display: block;
             text-align: center;
             font-size: 15px;
@@ -97,6 +97,7 @@
             &:hover {
                 text-decoration: none;
                 background: #fff;
+                box-shadow: none;
             }
         }
     }
