@@ -67,6 +67,45 @@
     width: 110px !important;
 }
 
+.form-special {
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="number"],
+    &__input--text {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 5px 0;
+        border: solid #dbdbdb;
+        border-width: 0 0 1px;
+        font-size: 14px;
+        font-family: 'Open Sans', sans-serif;
+        background: none;
+        outline: none;
+    }
+
+    &__submit {
+        padding-top: 17px;
+        text-align: right;
+    }
+    .select2-selection {
+        border: solid #dbdbdb !important;
+        border-width: 0 0 1px 0 !important;
+        border-radius: 0 !important;
+        height: 30px !important;
+        background: none !important;
+        outline: none !important;
+    }
+    .select2-selection__rendered {
+        line-height: 30px !important;
+        padding-left: 0 !important;
+    }
+    .select2-selection__arrow {
+        top: 1px !important;
+        right: 2px !important;
+    }
+}
+
 @media (max-width: $screen-xs-max) {
     .form {
         label {

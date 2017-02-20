@@ -167,6 +167,66 @@ p.pic {
     &--wide {
         max-width: 1342px;
     }
+
+    &--narrow {
+        max-width: 570px;
+    }
+}
+
+.list-collapsable {
+    background: #fff;
+    border-radius: 4px;
+    border: solid #dfe0e4;
+    border-width: 0 1px 1px 0;
+    overflow: hidden;
+    &__header {
+        font-size: 16px;
+        color: #6c6c6e;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-weight: 600;
+        padding: 17px 20px;
+        border-bottom: solid 1px #e8e8e8;
+        position: relative;
+        cursor: pointer;
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 50%;
+            right: 19px;
+            background: url(../img/plus.png);
+            width: 11px;
+            height: 11px;
+            overflow: hidden;
+            margin-top: -6px;
+        }
+        &.expanded {
+            background: #f6f6f8;
+            border-bottom: 0;
+            color: #1d1d1d;
+            padding-bottom: 10px;
+            &:before {
+                height: 3px;
+                background-position: 0 -4px;
+                margin-top: 2px;
+            }
+        }
+    }
+    &__small {
+        font-weight: normal;
+        font-size: 14px;
+        font-family: 'Open Sans', sans-serif;
+        margin-top: -4px;
+        line-height: 1.2;
+        margin-top: 1px;
+    }
+    &__content {
+        background: #f6f6f8;
+        padding: 0 20px 17px;
+        border-bottom: solid 1px #dfe0e4;
+    }
+    &__form {
+    }
 }
 
 @media (min-width: $screen-lg-min) {
@@ -213,5 +273,14 @@ p.pic {
 
     .main-breadcrumbs {
         margin-bottom: 20px;
+    }
+
+    .list-collapsable {
+        &__header {
+            font-size: 14px;
+        }
+        &__small {
+            font-size: 13px;
+        }
     }
 }
