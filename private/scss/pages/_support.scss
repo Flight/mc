@@ -14,11 +14,11 @@
         color: #2d2d2d;
         padding-top: 249px;
         text-align: center;
-        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-family: $font-family-alt;
         background: no-repeat 50% 0;
 
         &:hover {
-            color: #bf0000;
+            color: $color-danger;
             text-decoration: none;
         }
         &:before {
@@ -29,7 +29,7 @@
             right: 0;
             width: 1px;
             height: 108px;
-            background: #d9d9d9;
+            background: $color-border;
         }
         &--start {
             background-image: url(../img/support-icon-1.png);
@@ -47,7 +47,7 @@
 }
 
 .main-support-top-articles {
-    border-top: solid 1px #d9d9d9;
+    border-top: solid 1px $color-border;
     padding: 42px 0 65px;
     &__list {
         margin-top: 20px;
@@ -64,14 +64,14 @@
     &__title {
         font-size: 42px;
         font-weight: 300;
-        border-bottom: solid 1px #d9d9d9;
+        border-bottom: solid 1px $color-border;
         padding: 0 0 33px;
     }
     &__block {
         margin: 45px 0 55px;
     }
     &__list {
-        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-family: $font-family-alt;
         font-size: 18px;
         margin-top: 18px;
         font-weight: 600;
@@ -80,7 +80,7 @@
         }
     }
     &__show-all {
-        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-family: $font-family-alt;
         font-size: 15px;
         font-weight: bold;
         margin: 10px 0 0;
@@ -97,7 +97,7 @@
     &__content {
         margin: 28px 0 0;
         padding: 5px 0 0;
-        border-top: solid 1px #d9d9d9;
+        border-top: solid 1px $color-border;
     }
     p {
         margin: 10px 0;

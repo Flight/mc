@@ -11,12 +11,14 @@
         $('.js-card-number').mask('9999-9999-9999-9999');
         $('.js-cvv').mask('999');
         $('.js-date').mask('99/99/9999', {placeholder:'mm/dd/yyyy'});
+        $('.js-date-dot').mask('99.99.9999', {placeholder:'mm.dd.yyyy'});
+        $('.js-time').mask('99:99', {placeholder:'hh.mm'});
 
         $('.js-toggler-header').on('click', function () {
             var header = $(this);
 
             header.toggleClass('expanded');
-            header.next().toggleClass('hidden');
+            header.next().toggleClass('hidden-xs-up');
         });
     });
 

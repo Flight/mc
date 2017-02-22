@@ -1,6 +1,6 @@
 .form {
     label {
-        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-family: $font-family-alt;
         font-weight: bold;
         font-size: 16px;
     }
@@ -14,9 +14,9 @@
         box-sizing: border-box;
         padding: 11px 13px;
         border: solid 1px #dbdbdb;
-        border-radius: 4px;
-        font-size: 14px;
-        font-family: 'Open Sans', sans-serif;
+        border-radius: $border-radius;
+        font-size: $font-size-text;
+        font-family: $font-family-default;
     }
 }
 
@@ -33,7 +33,7 @@
             top: 2px;
         }
         label {
-            font-size: 14px;
+            font-size: $font-size-text;
             font-weight: 700;
             vertical-align: top;
         }
@@ -78,8 +78,8 @@
         padding: 5px 0;
         border: solid #dbdbdb;
         border-width: 0 0 1px;
-        font-size: 14px;
-        font-family: 'Open Sans', sans-serif;
+        font-size: $font-size-text;
+        font-family: $font-family-default;
         background: none;
         outline: none;
     }
@@ -104,21 +104,44 @@
         top: 1px !important;
         right: 2px !important;
     }
+    &__subtitle {
+        font-size: 13px;
+        font-family: $font-family-alt;
+        font-weight: 600;
+        margin: 16px 0 0;
+    }
+}
+
+.list-checkbox {
+    li {
+        position: relative;
+        border-top: solid 1px #e3e3e3;
+        padding: 4px 0;
+        font-size: 13px;
+        &:first-child {
+            border-top: none;
+        }
+        input {
+            position: absolute;
+            top: 5px;
+            right: 0;
+        }
+    }
 }
 
 @media (max-width: $screen-xs-max) {
     .form {
         label {
-            font-size: 14px;
+            font-size: $font-size-text;
         }
     }
     .form-row {
         &__title {
-            font-size: 12px;
+            font-size: $font-size-small;
         }
         &--checkbox {
             label {
-                font-size: 12px;
+                font-size: $font-size-small;
                 vertical-align: top;
             }
         }

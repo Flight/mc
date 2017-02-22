@@ -2,7 +2,7 @@
     padding: 74px 0 87px;
     &__row {
         margin: 0;
-        border-radius: 4px;
+        border-radius: $border-radius;
         overflow: hidden;
         border: solid #dfe0e4;
         border-width: 0 1px 1px 0;
@@ -31,7 +31,7 @@
     &__title {
         position: relative;
         padding: 45px 0 10px;
-        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-family: $font-family-alt;
         font-size: 16px;
         font-weight: 500;
         &--border:before {
@@ -40,7 +40,7 @@
             top: 0;
             left: -30px;
             right: -30px;
-            background: #d9d9d9;
+            background: $color-border;
             height: 1px;
             overflow: hidden;
         }
@@ -55,7 +55,7 @@
         padding: 20px 30px;
         color: #78797e;
         font-size: 13px;
-        border-radius: 4px;
+        border-radius: $border-radius;
         border: solid #e5e6e8;
         border-width: 0 1px 1px 0;
         &:before {
@@ -80,7 +80,7 @@
         float: left;
     }
     &__info {
-        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-family: $font-family-alt;
         margin-left: 55px;
         color: #5a5a5a;
         font-size: 13px;
@@ -93,7 +93,7 @@
 
 .form--signup {
     label {
-        font-size: 14px;
+        font-size: $font-size-text;
         font-weight: 600;
     }
 }
@@ -101,17 +101,17 @@
 .main-payment {
     margin: 53px 0 10px;
     border: solid 3px #dbdce2;
-    border-radius: 4px;
+    border-radius: $border-radius;
     padding: 26px 24px 18px;
     font-size: 13px;
     &__title {
         font-size: 18px;
-        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-family: $font-family-alt;
         font-weight: bold;
     }
     &__subtitle {
-        font-size: 14px;
-        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: $font-size-text;
+        font-family: $font-family-alt;
         font-weight: 600;
         margin: 12px 0 5px;
     }
@@ -139,7 +139,7 @@
         margin: 15px 0 10px;
         font-size: 16px;
         font-weight: 600;
-        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-family: $font-family-alt;
     }
 
     &__secure {
@@ -151,9 +151,9 @@
         line-height: 18px;
         overflow: hidden;
         padding-right: 20px;
-        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-family: $font-family-alt;
         font-weight: 500;
-        font-size: 12px;
+        font-size: $font-size-small;
     }
 }
 
@@ -184,7 +184,7 @@
 @media (max-width: $screen-xs-max) {
     .main-signup {
         padding: 32px 0 55px;
-        font-size: 12px;
+        font-size: $font-size-small;
     }
     .main-signup-form {
         padding-top: 12px;
@@ -202,7 +202,7 @@
             margin-top: 20px;
         }
         .form--signup label {
-            font-size: 12px;
+            font-size: $font-size-small;
         }
         .input--small {
             width: 80px !important;

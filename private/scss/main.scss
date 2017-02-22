@@ -15,44 +15,80 @@
 .text-right {
     text-align: right !important;
 }
-.hidden {
-    display: none !important;
-    @media (max-width: $screen-xs-max) {
-        &--xs {
-            display: none !important;
-        }
-    }
-}
 .mln {
     margin-left: 0 !important;
-}
-br.visible--lg {
-    display: none;
-}
-.pull-left {
-    float: left;
-}
-.pull-right {
-    float: right;
 }
 strong {
     font-weight: bold;
 }
 
+.img-border {
+    border-radius: $border-radius;
+}
+
 .border-top {
-    border-top: solid 1px #d9d9d9;
+    border-top: solid 1px $color-border;
+}
+
+.img-responsive {
+    max-width: 100%;
+    display: block;
 }
 
 .list {
     li {
         margin: 12px 0 0;
         padding-left: 24px;
-        background: url(../img/list-dot.png) no-repeat 0 50%;
+        background: url(../img/list-dot.png) no-repeat 0 7px;
+    }
+}
+
+.list-subitems {
+    margin: 27px 0 25px;
+    li {
+        display: inline;
+        &:first-child a {
+            color: #fff;
+            background: url(../img/list-subitems-corner.png) no-repeat 100% 50%, linear-gradient(to right, $color-danger 0%,#e85660 100%);
+            font-weight: bold;
+            letter-spacing: 1px;
+            border: none;
+        }
+    }
+    a {
+        display: inline-block;
+        background: #fff;
+        border: solid $color-border;
+        border-width: 0 1px 1px 0;
+        border-radius: $border-radius;
+        margin: 5px 2px 0 0;
+        padding: 4px 12px 3px;
+        color: #78797e;
+        font-size: $font-size-small;
+        font-weight: 500;
+        font-family: $font-family-alt;
+        &:hover {
+            text-decoration: none;
+        }
     }
 }
 
 .color-danger {
-    color: #bf0000;
+    color: $color-danger;
+}
+
+.table {
+    td {
+        padding-right: 15px;
+    }
+
+    &--info {
+        font-family: $font-family-alt;
+        td:first-child {
+            font-weight: 600;
+            color: #121212;
+        }
+    }
 }
 
 h1,
@@ -68,7 +104,7 @@ h5,
 h6,
 .h6 {
     color: #2d2d2d;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: $font-family-alt;
     font-weight: bold;
     line-height: 1;
     text-align: left;
@@ -76,27 +112,27 @@ h6,
 
 h1,
 .h1 {
-    font-size: 44px;
+    font-size: $font-size-h1;
 }
 h2,
 .h2 {
-    font-size: 26px;
+    font-size: $font-size-h2;
 }
 h3,
 .h3 {
-    font-size: 21px;
+    font-size: $font-size-h3;
 }
 h4,
 .h4 {
-    font-size: 18px;
+    font-size: $font-size-h4;
 }
 h5,
 .h5 {
-    font-size: 16px;
+    font-size: $font-size-h5;
 }
 h6,
 .h6 {
-    font-size: 14px;
+    font-size: $font-size-h6;
 }
 
 html,
@@ -109,16 +145,17 @@ html {
     background: #edeef2;
 }
 body {
+    word-wrap: break-word;
     position: relative;
     color: #2f3030;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
+    font-family: $font-family-default;
+    font-size: $font-size-text;
     line-height: 1.6;
     min-width: 320px;
 }
 
 a {
-    color: #bf0000;
+    color: $color-danger;
     text-decoration: none;
     &:hover,
     &:focus {
@@ -127,8 +164,8 @@ a {
 }
 
 .main-breadcrumbs {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 12px;
+    font-family: $font-family-alt;
+    font-size: $font-size-small;
     margin: 29px 0 50px;
     a,
     span {
@@ -175,16 +212,16 @@ p.pic {
 
 .list-collapsable {
     background: #fff;
-    border-radius: 4px;
+    border-radius: $border-radius;
     border: solid #dfe0e4;
     border-width: 0 1px 1px 0;
     overflow: hidden;
     &__header {
         font-size: 16px;
         color: #6c6c6e;
-        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-family: $font-family-alt;
         font-weight: 600;
-        padding: 17px 20px;
+        padding: 17px 21px;
         border-bottom: solid 1px #e8e8e8;
         position: relative;
         cursor: pointer;
@@ -211,11 +248,21 @@ p.pic {
                 margin-top: 2px;
             }
         }
+        &--checkbox {
+            &:before {
+                display: none;
+            }
+            input {
+                position: absolute;
+                top: 22px;
+                right: 15px;
+            }
+        }
     }
     &__small {
         font-weight: normal;
-        font-size: 14px;
-        font-family: 'Open Sans', sans-serif;
+        font-size: $font-size-text;
+        font-family: $font-family-default;
         margin-top: -4px;
         line-height: 1.2;
         margin-top: 1px;
@@ -224,6 +271,10 @@ p.pic {
         background: #f6f6f8;
         padding: 0 20px 17px;
         border-bottom: solid 1px #dfe0e4;
+    }
+    .checkbox {
+        font-size: 13px;
+        font-family: $font-family-alt;
     }
     &__form {
     }
@@ -243,32 +294,32 @@ p.pic {
 
 @media (max-width: $screen-xs-max) {
     body {
-        font-size: 13px;
+        font-size: $font-size-text-xs;
     }
 
     h1,
     .h1 {
-        font-size: 29px;
+        font-size: $font-size-h1-xs;
     }
     h2,
     .h2 {
-        font-size: 21px;
+        font-size: $font-size-h2-xs;
     }
     h3,
     .h3 {
-        font-size: 18px;
+        font-size: $font-size-h3-xs;
     }
     h4,
     .h4 {
-        font-size: 16px;
+        font-size: $font-size-h4-xs;
     }
     h5,
     .h5 {
-        font-size: 14px;
+        font-size: $font-size-h5-xs;
     }
     h6,
     .h6 {
-        font-size: 12px;
+        font-size: $font-size-h6-xs;
     }
 
     .main-breadcrumbs {
@@ -277,7 +328,7 @@ p.pic {
 
     .list-collapsable {
         &__header {
-            font-size: 14px;
+            font-size: $font-size-text;
         }
         &__small {
             font-size: 13px;
