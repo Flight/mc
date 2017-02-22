@@ -216,13 +216,17 @@
 
 @media (max-width: $screen-xs-max) {
     .main-specific-opp {
-        margin-top: 25px;
+        margin-top: 15px;
         font-size: 12px;
         &__row {
             padding-top: 10px;
+            border-top: 0;
+            padding-top: 0;
         }
         &__title {
             font-size: 24px;
+            border-bottom: solid 1px #d9d9d9;
+            padding: 10px 0 20px;
         }
         &__left, &__right {
             margin-top: 15px;
